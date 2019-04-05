@@ -13,7 +13,7 @@ struct TestHelper {
   }
 
   static func triggerApplicationEvents() {
-    #if (iOS)
+    #if os(iOS)
     NotificationCenter.default.post(name: UIApplication.didEnterBackgroundNotification, object: nil)
     NotificationCenter.default.post(name: UIApplication.willTerminateNotification, object: nil)
     #elseif os(tvOS)
